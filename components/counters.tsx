@@ -20,9 +20,10 @@ function MyButton() {
                 <div >
                   {val[0]}
                   {nestedColours.map((value: any) => {
+                    if (value[1]) 
                     return (
                     <div style={{backgroundColor: value[1]}} className={styles.counter}>
-                      {value[1]}  
+                      {value.value}  
                       </div>
 
                     )
