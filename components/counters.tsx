@@ -3,19 +3,8 @@ import tokens from '../tokens.json'
 import React from 'react'
 
 function MyButton() {
-  const categories = Object.entries(tokens)
-
   const { colors } = tokens;
-  const circleStyle = {
-    display: 'inline-block',
-    width: '75px',
-    height: '75px',
-    border: '1px solid grey',
-    borderRadius: '50%',
-    margin: '5px',
-  };
-  const colorComponents = Object.entries(colors)
-  const groupColorsBySection = (colors) => {
+  const groupColorsBySection = (colors: Record<string, unknown>) => {
     const sections = {};
     Object.keys(colors).forEach((key) => {
       const colorObj = colors[key];
@@ -70,37 +59,6 @@ function MyButton() {
     </>
   )
 }
-// {categories.map(item => {
-//   return (
-//     <div>
-//       <h1>
-//         {item[0]}
-//       </h1>
-//       {item[0] === 'colors' &&
-//         <>
-//       {Object.entries(item[1]).map(val => {
-//         const nestedColours = Object.entries(val[1])
-//         console.log({nestedColours});
-//         return (
-//           <div >
-//             {val[0]}
-//             {nestedColours.map((value: any) => {
-//               if (value[1]) 
-//               return (
-//               <div style={{backgroundColor: value[1]}} className={styles.counter}>
-//                 {value.value}  
-//                 </div>
-
-//               )
-//             })}
-//           </div>
-//         )
-//       })}
-//         </>
-//       }
-//     </div>
-//   )
-// })}
 
 export default function MyApp() {
   return <MyButton />

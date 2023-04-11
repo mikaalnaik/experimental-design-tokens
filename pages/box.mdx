@@ -1,0 +1,45 @@
+import { FlexBox } from '../components/Box/Flex'
+
+# Box
+
+
+## Flexbox 
+
+<br/>
+### Default
+<FlexBox> Howdy Folks </FlexBox>
+
+```ts
+<FlexBox> Howdy Folks </FlexBox>
+```
+
+### Full Height
+<div style={{height: '250px'}}>
+  <FlexBox alignItems={'center'}  fullHeight={true}>
+    Howdy Folks
+  </FlexBox>
+</div>
+
+```ts
+<div style={{height: '250px'}}>
+  <FlexBox alignItems={'center'} fullHeight={true}>
+    Howdy Folks
+  </FlexBox>
+</div>
+```
+<br/>
+
+### Overrides 
+<FlexBox alignItems={'center'} fullWidth={true}  sx={{backgroundColor: 'green'}}>
+  Howdy Folks
+</FlexBox>
+
+```ts
+<FlexBox alignItems={'center'} fullWidth={true} sx={{backgroundColor: 'green'}}>
+  Howdy Folks
+</FlexBox>
+```
+
+`sx={{...}}` can be used as an escape hatch for custom styling in a bind. 
+
+Please use the design tokens we expose that can be found [here](...)

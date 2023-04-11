@@ -1,0 +1,15 @@
+.component {
+    display: grid;
+    gap: 2rem;
+    background-color: rgba(245, 245, 245, 1);
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+}
+
+.surface {
+    width: 150px;
+    border-radius: 10px;
+    height: 150px;
+    background-color: white;
+    border: '1px solid grey',
+}
